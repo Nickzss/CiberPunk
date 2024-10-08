@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body {
+    background-color: #0a0a0a;
+    color: #00ff00;
+    line-height: 1.6;
+}
+header {
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    padding: 2rem;
+    text-align: center;
+}
+.logo {
+    max-width: 300px;
+    margin: 0 auto;
+}
+nav {
+    background: #1a1a1a;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+nav a {
+    color: #00ff00;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #00cc00;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+h1, h2 {
+    color: #00ff00;
+    margin-bottom: 1rem;
+}
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #00ff00;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #0a0a0a;
+    border: 4px solid #00ff00;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.left {
+    left: 0;
+}
+.right {
+    left: 50%;
+}
+.right::after {
+    left: -16px;
+}
+.content {
+    padding: 20px 30px;
+    background: rgba(0, 255, 0, 0.1);
+    position: relative;
+    border-radius: 6px;
+}
+.year {
+    font-weight: bold;
+    color: #00ff00;
+    margin-bottom: 0.5rem;
+}
+footer {
+    background: #1a1a1a;
+    color: #00ff00;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+@media screen and (max-width: 600px) {
+    .timeline::after {
+        left: 31px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .timeline-item::after {
+        left: 15px;
+    }
+    .right {
+        left: 0%;
+    }
+}
